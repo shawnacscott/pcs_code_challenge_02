@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 # extend kernal to include global method 'h'
 module Kernel
   def h
@@ -5,23 +7,23 @@ module Kernel
     exit
   end
 end
- 
+
 # This is documentation
 class HQ9F
   include Enumerable
   attr_accessor :incrementor, :lyrics, :accumulator, :accumulator_array, :array
-  
+
   def each
-    @array = [ "Food", "is", "GOOD!" ] 
+    @array = ['Food', 'is', 'GOOD!']
     @array.each { |x| puts x }
-  end   
+  end
 
   def input_99
     puts @lyrics[6]
     @incrementor = gets.strip.to_i
     @final = @incrementor
   end
- 
+
   def _99
     input_99
     while @incrementor >= 0
@@ -45,7 +47,7 @@ class HQ9F
       end
     end
   end
- 
+
   def +
     @accumulator = @accumulator_array[-1] + 1
     @accumulator_array.push(@accumulator)

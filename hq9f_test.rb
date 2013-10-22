@@ -10,10 +10,10 @@ class TestMyClass < MiniTest::Unit::TestCase
   end
 
   def test_example
-    assert_output('hi\n') { puts 'hi' }
+    assert_output("hi\n") { puts "hi" }
   end
 
   def test_each_method_iterates
-    assert_output('Food\nis\nGOOD!\n') { @my_instance.each }
+    assert_output("Food\nis\nGOOD!\n") { @my_instance.each }
   end
 end
